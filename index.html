@@ -12,6 +12,62 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <!-- Navigation Bar-->
+<header id="topnav" class="defaultscroll fixed-top sticky nav">
+  <div class="container">
+    <!-- Logo container-->
+    <div class="logo row text-center">
+      <!-- image logo -->
+      <a href="https://imgur.com/nvcewEb"><img class="busie" alt="logo" src="https://i.imgur.com/nvcewEb.png" title="source: imgur.com" style="height: 100px" /></a>
+    </div>
+    <!-- End Logo container-->
+  </div>
+</header>
+<!-- id created for my user action alerts -->
+<p id="message"></p>
+
+<div id="pageone">
+  <!-- Tagline -->
+  <h1 class="tagline">Create your internal library today, but remember "Keep it brief."</h1>
+  <h4 class="taglinetwo"> If you haven't made an account, sign up! Otherwise, sign in to your portal below.</h4>
+  <br>
+  <!--Sign Up Button -->
+  <div class="wrapper">
+    <button type="button" id="pageoneButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
+Sign Up!
+<!-- data target must be the same as id below -->
+</button>
+  </div>
+
+  <!-- Sign up Form Creation-->
+  <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button id="sign-up-button" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+        </div>
+        <div class="modal-body">
+          <form class='signup-form'>
+            <div>
+              <label for="exampleInputEmail1">Email address</label>
+              <input name="credentials[email]" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input name="credentials[password]" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+            </div>
+            <div class="form-group confirmation">
+              <label for="exampleInputPasswordConfirmation">Password Confirmation</label>
+              <input name="credentials[password_confirmation]" type="password" class="form-control" id="exampleInputPasswordConfirmation" placeholder="Password Confirmation" required>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
     </body>
 </html>
