@@ -47,9 +47,22 @@ const signOut = function (data) {
   })
 }
 
+const createBriefs = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/briefs',
+    method: 'POST',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  createBriefs
 }

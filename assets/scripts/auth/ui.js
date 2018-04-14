@@ -88,6 +88,23 @@ const signOutFailure = function (error) {
   goTop()
 }
 
+const createBriefSuccess = function (data) {
+  $('#message').text('You have sucessfully created a trip!')
+  $('#message').css('background-color', 'green')
+  // console.log(events)
+  $('.content').empty()
+  $('.update').val('')
+  store.trip = data.trip // TODO:come back to this
+  goTop()
+}
+
+const createBriefFailure = function () {
+  $('#message').text('Error while creating a trip')
+  $('#message').css('background-color', 'red')
+  $('.update').val('')
+  goTop()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -96,5 +113,7 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  createBriefSuccess,
+  createBriefFailure
 }

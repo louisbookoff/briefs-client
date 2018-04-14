@@ -42,11 +42,23 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onCreateBriefs = function (event) {
+  event.preventDefault()
+  // pass event.target to getFormFields to create a data object
+  const data = getFormFields(event.target)
+
+  // pass data to createTrips function
+  api.createBriefs(data)
+    .then(ui.createBriefSuccess)
+    .catch(ui.createBriefFailure)
+}
+
 const addHandlers = () => {
   $('.signup-form').on('submit', onSignUp)
   $('.signin-form').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
+  $('#create-brief').on('submit', onCreateBriefs)
 }
 
 module.exports = {
