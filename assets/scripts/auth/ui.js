@@ -53,9 +53,48 @@ const signInFailure = function () {
   goTop()
 }
 
+const changePasswordSuccess = function () {
+  $('#message').text('You have changed your password succesfully')
+  $('#message').css('background-color', 'green')
+  $('#old-password').val('')
+  $('#new-password').val('')
+  // console.log('change password successfully')
+  goTop()
+}
+
+const changePasswordFailure = function (error) {
+  $('#message').text('Error changing password')
+  $('#message').css('background-color', 'red')
+  $('#old-password').val('')
+  $('#new-password').val('')
+  console.error(error)
+  goTop()
+}
+
+const signOutSuccess = function () {
+  $('#message').text('You have signed out succesfully')
+  $('#message').css('background-color', 'green')
+  $('#dashboard').toggleClass('hidden')
+  $('#pageone').removeClass('hidden')
+  $('.content').empty()
+  // console.log('Signed out successfully')
+  goTop()
+}
+
+const signOutFailure = function (error) {
+  $('#message').text('Error on sign out')
+  $('#message').css('background-color', 'red')
+  console.error(error)
+  goTop()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
   signInSuccess,
-  signInFailure
+  signInFailure,
+  changePasswordSuccess,
+  changePasswordFailure,
+  signOutSuccess,
+  signOutFailure
 }
