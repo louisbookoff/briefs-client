@@ -127,7 +127,7 @@ const getBriefsFailure = function (data) {
 }
 
 const updateBriefSuccess = function (data) {
-  $('#message').text('You have sucessfully updated that trip!')
+  $('#message').text('You have sucessfully updated that brief!')
   $('#message').css('background-color', 'green')
   $('.content').empty()
   store.brief = data.brief

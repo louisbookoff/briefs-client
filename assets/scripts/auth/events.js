@@ -64,8 +64,9 @@ const onUpdateBrief = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   console.log('event.target is', event.target)
+  const updateId = event.target.dataset.id
   // send data to api method
-  api.updateBrief(data)
+  api.updateBrief(updateId, data)
     .then(ui.updateBriefSuccess)
     .catch(ui.updateBriefFailure)
 }
@@ -87,7 +88,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#create-brief').on('submit', onCreateBriefs)
   $('.briefs').on('click', onGetBriefs)
-  $('.change-brief').on('submit', '.edit', onUpdateBrief)
+  $('#content').on('submit', '.change-brief', onUpdateBrief)
   $('#content').on('click', '.delete', onDeleteBrief)
 }
 
