@@ -3,6 +3,8 @@
 const api = require('./api')
 const getFormFields = require('.../../../lib/get-form-fields')
 const ui = require('./ui')
+const showHandlebars = require('../templates/partial.hbs')
+const store = require('../store')
 
 const onSignUp = function (event) {
   event.preventDefault()
@@ -16,7 +18,6 @@ const onSignUp = function (event) {
 
 const onSignIn = function (event) {
   event.preventDefault()
-
   const data = getFormFields(this)
   api.signIn(data)
     .then(ui.signInSuccess)
@@ -63,6 +64,7 @@ const onGetBriefs = function (event) {
 const onUpdateBrief = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
+  console.log('data is ', data)
   console.log('event.target is', event.target)
   const updateId = event.target.dataset.id
   // send data to api method
@@ -88,8 +90,15 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#create-brief').on('submit', onCreateBriefs)
   $('.briefs').on('click', onGetBriefs)
-  $('#content').on('submit', '.change-brief', onUpdateBrief)
+  $('.change-brief').on('submit', onUpdateBrief)
   $('#content').on('click', '.delete', onDeleteBrief)
+  $('#content').on('click', '.new-button', function (event) {
+    console.log('we working')
+    $('#testing-this-modal').modal('toggle')
+    store.brief = event.target.dataset.id
+    // const showBriefsHtml = showHandlebars({ briefs: null })
+    // $('#handlebars').html(showBriefsHtml)
+  })
 }
 
 module.exports = {

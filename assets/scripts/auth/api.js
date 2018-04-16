@@ -70,10 +70,11 @@ const getBriefs = function () {
   })
 }
 
-const updateBrief = function (id, data) {
+const updateBrief = function (data) {
   console.log('data is ', data)
+  console.log('store.brief is ', store.brief)
   return $.ajax({
-    url: config.apiUrl + '/briefs/' + id,
+    url: config.apiUrl + '/briefs/' + store.brief,
     method: 'PATCH',
     headers: {
       contentType: 'application/json',
