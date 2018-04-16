@@ -59,10 +59,46 @@ const createBriefs = function (data) {
   })
 }
 
+const getBriefs = function () {
+  return $.ajax({
+    url: config.apiUrl + '/briefs',
+    method: 'GET',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
+const updateBrief = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/briefs/' + data.brief.id,
+    method: 'PATCH',
+    headers: {
+      contentType: 'application/json',
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const deleteBrief = function (id) {
+  return $.ajax({
+    url: config.apiUrl + '/briefs/' + id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePassword,
   signOut,
-  createBriefs
+  createBriefs,
+  getBriefs,
+  updateBrief,
+  deleteBrief
 }

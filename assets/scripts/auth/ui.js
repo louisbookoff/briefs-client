@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const showHandlebars = require('../templates/list.hbs')
 
 const goTop = function () {
   $('html, body').animate({ scrollTop: 0 }, 'fast')
@@ -105,6 +106,42 @@ const createBriefFailure = function () {
   goTop()
 }
 
+const getBriefsSuccess = function (data) {
+  // console.log(data)
+  const showBriefsHtml = showHandlebars({ briefs: data.briefs })
+  $('#content').html(showBriefsHtml)
+  const elements = data.briefs
+  if (elements.length === 0) {
+    $('#message').text('You have no briefs, the table below is empty can\'t you see?')
+    $('#message').css('background-color', 'red')
+  } else {
+    $('#message').text('Below are your briefs. Note: If there are none in the table try creating some.')
+    $('#message').css('color', 'white')
+  }
+}
+
+const getBriefsFailure = function (data) {
+  $('#message').text('You have no briefs')
+  $('#message').css('background-color', 'red')
+  goTop()
+}
+
+const updateBriefSuccess = function (data) {
+  $('#message').text('You have sucessfully updated that trip!')
+  $('#message').css('background-color', 'green')
+  $('.content').empty()
+  store.brief = data.brief
+  console.log(store.brief)
+  goTop()
+}
+
+const updateBriefFailure = function () {
+  $('#message').text('Error while updating brief')
+  $('#message').css('background-color', 'red')
+  $('.content').empty()
+  goTop()
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -115,5 +152,9 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   createBriefSuccess,
-  createBriefFailure
+  createBriefFailure,
+  getBriefsSuccess,
+  getBriefsFailure,
+  updateBriefSuccess,
+  updateBriefFailure
 }

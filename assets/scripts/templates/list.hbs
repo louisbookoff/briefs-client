@@ -1,0 +1,66 @@
+<table style="width:100%" class="table content table-hover">
+  <thead class="thead-dark">
+    <th align="center"> Brief ID </th>
+    <th align="center"> Brief Title </th>
+    <th align="center"> Subject </th>
+    <th align="center"> Body Text </th>
+    <th align="center"> Created On </th>
+    <th align="center"> Updated On </th>
+
+
+    {{#each briefs as |brief|}}
+      <!-- {{> partial}} -->
+
+      <tr style="width:50%">
+  </thead>
+  <tbody>
+    <td> brief: {{brief.id}} </td>
+
+    <!-- <div> -->
+    <td> {{brief.title}} </td>
+    <td> {{brief.subject}} </td>
+    <td> {{brief.body_text}} </td>
+    <td> {{brief.created_at}} </td>
+    <td> {{brief.updated_at}} </td>
+
+    <!-- </div> -->
+
+    <td> <button data-id="{{brief.id}}" class="btn btn-default delete">Delete Brief</button> </td>
+    <td>
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Brief</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="change-brief">
+            <label for="exampleInputTitle">Title</label>
+            <input class="update form-control" type="text" name="brief[title]" placeholder="Title" required>
+            <label for="exampleInputSubject">Subject</label>
+            <input class="update form-control" type="text" name="brief[subject]" placeholder="Subject" required>
+            <label for="exampleInputBody">Brief Text</label>
+            <textarea cols="30" rows="5" class="update form-control" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button data-id="{{brief.id}}" type="submit" class="btn btn-primary edit">Save changes</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+    </tr>
+  </tbody>
+  {{/each}}
+</table>

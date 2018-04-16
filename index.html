@@ -105,37 +105,37 @@ Sign Up!
       </div>
     </div>
 
-  <div class="offering">
-  </div>
+    <div class="offering">
+    </div>
   </div>
 
-<!-- Briefs Dashboard  -->
-<div id="dashboard" class="hidden">
-  <h3>User Profile</h3>
-  <form id="change-password" class="border">
-    <div class="form-group">
-      <label for="exampleInputpickup1">Old Password</label>
-      <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" id="old-password" required>
-    </div>
-    <div class="form-group">
-      <label for="exampleInputdropoff1">New Password</label>
-      <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" id="new-password" required>
-    </div>
-    <div class="wrapper">
-      <button type="submit" class="btn btn-primary">Change Password</button>
-    </div>
-  </form>
-  <br>
-  <form id="sign-out" class="border">
-    <fieldset>
-      <div class="wrapper">
-        <!-- <legend>Sign out!</legend> -->
-        <button type="submit" class="btn btn-primary sign-out">Sign Out!</button>
+  <!-- Briefs Dashboard  -->
+  <div id="dashboard" class="hidden">
+    <h3>User Profile</h3>
+    <form id="change-password" class="border">
+      <div class="form-group">
+        <label for="exampleInputpickup1">Old Password</label>
+        <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" id="old-password" required>
       </div>
-    </fieldset>
-  </form>
+      <div class="form-group">
+        <label for="exampleInputdropoff1">New Password</label>
+        <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" id="new-password" required>
+      </div>
+      <div class="wrapper">
+        <button type="submit" class="btn btn-primary">Change Password</button>
+      </div>
+    </form>
+    <br>
+    <form id="sign-out" class="border">
+      <fieldset>
+        <div class="wrapper">
+          <!-- <legend>Sign out!</legend> -->
+          <button type="submit" class="btn btn-primary sign-out">Sign Out!</button>
+        </div>
+      </fieldset>
+    </form>
 
-<legend>Create a Brief</legend>
+    <legend>Create a Brief</legend>
     <form id="create-brief">
       <div class="form-group">
         <label for="exampleInputTitle">Title</label>
@@ -147,12 +147,26 @@ Sign Up!
       </div>
       <div class="form-group">
         <label for="exampleInputBody">Brief Text</label>
-        <textarea cols="30" rows="5"  class="update form-control" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+        <textarea cols="30" rows="5" class="update form-control" name="brief[body_text]" placeholder="Brief text here" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Finalize Your Brief!</button>
     </form>
+
+
+    <br>
+    <div class="wrapper">
+      <button type="button" class="btn btn-primary btn-lg briefs">See Briefs!</button>
+      <div id="content">
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+
     <!-- Dashboard closing div  -->
-</div>
+  </div>
 </body>
 
 </html>
