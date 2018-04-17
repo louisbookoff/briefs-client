@@ -129,14 +129,27 @@ const getBriefsFailure = function (data) {
 const updateBriefSuccess = function (data) {
   $('#message').text('You have sucessfully updated that brief!')
   $('#message').css('background-color', 'green')
-  // $('.content').empty()
+  $('.content').empty()
   store.brief = data.brief
-  console.log(store.brief)
-  // goTop()
-  $('.modal').modal('toggle')
+  goTop()
+  $('#testing-this-modal').modal('toggle')
 }
 
 const updateBriefFailure = function () {
+  $('#message').text('Error while updating brief')
+  $('#message').css('background-color', 'red')
+  $('.content').empty()
+  goTop()
+}
+
+const deleteBriefSuccess = function () {
+  $('#message').text('Brief deleted')
+  $('#message').css('background-color', 'green')
+  $('.content').empty()
+  goTop()
+}
+
+const deleteBriefFailure = function () {
   $('#message').text('Error while updating brief')
   $('#message').css('background-color', 'red')
   $('.content').empty()
@@ -157,5 +170,7 @@ module.exports = {
   getBriefsSuccess,
   getBriefsFailure,
   updateBriefSuccess,
-  updateBriefFailure
+  updateBriefFailure,
+  deleteBriefSuccess,
+  deleteBriefFailure
 }

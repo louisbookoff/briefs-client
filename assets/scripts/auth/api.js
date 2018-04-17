@@ -70,7 +70,7 @@ const getBriefs = function () {
   })
 }
 
-const updateBrief = function (data) {
+const updateBrief = function (updateId, data) {
   console.log('data is ', data)
   console.log('store.brief is ', store.brief)
   return $.ajax({

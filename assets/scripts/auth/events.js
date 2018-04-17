@@ -65,6 +65,8 @@ const onUpdateBrief = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   console.log('data is ', data)
+  console.log('children are', event.target.elements)
+
   console.log('event.target is', event.target)
   const updateId = event.target.dataset.id
   // send data to api method
