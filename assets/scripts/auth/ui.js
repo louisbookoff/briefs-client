@@ -2,6 +2,7 @@
 
 const store = require('../store')
 const showHandlebars = require('../templates/list.hbs')
+const events = require('./events')
 
 const goTop = function () {
   $('html, body').animate({ scrollTop: 0 }, 'fast')
@@ -95,7 +96,6 @@ const createBriefSuccess = function (data) {
   // console.log(events)
   $('.content').empty()
   $('.update').val('')
-  store.trip = data.trip // TODO:come back to this
   goTop()
 }
 
@@ -133,6 +133,9 @@ const updateBriefSuccess = function (data) {
   store.brief = data.brief
   goTop()
   $('#testing-this-modal').modal('toggle')
+  $('.title-class').val('')
+  $('.subject-class').val('')
+  $('.body-class').val('')
 }
 
 const updateBriefFailure = function () {
@@ -140,6 +143,9 @@ const updateBriefFailure = function () {
   $('#message').css('background-color', 'red')
   $('.content').empty()
   goTop()
+  $('.title-class').val('')
+  $('.subject-class').val('')
+  $('.body-class').val('')
 }
 
 const deleteBriefSuccess = function () {

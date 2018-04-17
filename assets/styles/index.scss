@@ -1,2 +1,29 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+.center-create-form {
+  border: 3px solid black;
+  margin: auto;
+  padding: 10px;
+  width: 50%;
+}
+
+.handlebars-show {
+  margin: auto;
+  padding: 10px;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+.title,
+.subject {
+  width: 50%;
+}
+
+.body-text {
+  width: 80%;
+}

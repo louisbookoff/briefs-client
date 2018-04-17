@@ -92,7 +92,7 @@ Sign Up!
             <form class='signin-form'>
               <div>
                 <label for="InputEmail">Email address</label>
-                <input name="credentials[email]" type="email" class="form-control" id="InputEmail1" placeholder="Email" required>
+                <input name="credentials[email]" type="email" class="form-control" id="InputEmail1" placeholder="Email" autocomplete="email" required>
               </div>
               <div class="form-group">
                 <label for="InputPassword">Password</label>
@@ -135,22 +135,24 @@ Sign Up!
       </fieldset>
     </form>
 
+    <div class="center-create-form">
     <legend>Create a Brief</legend>
-    <form id="create-brief">
+    <form id="create-brief" class="create-form">
       <div class="form-group">
         <label for="exampleInputTitle">Title</label>
-        <input class="update form-control" type="text" name="brief[title]" placeholder="Title" required>
+        <input class="update form-control title" type="text" name="brief[title]" placeholder="Title"  size="15" required>
       </div>
       <div class="form-group">
         <label for="exampleInputSubject">Subject</label>
-        <input class="update form-control" type="text" name="brief[subject]" placeholder="Subject" required>
+        <input class="update form-control subject" type="text" name="brief[subject]" placeholder="Subject"  size="10" required>
       </div>
       <div class="form-group">
         <label for="exampleInputBody">Brief Text</label>
-        <textarea cols="30" rows="5" class="update form-control" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+        <textarea cols="30" rows="5" class="update form-control body-text" name="brief[body_text]" placeholder="Brief text here" required></textarea>
       </div>
       <button type="submit" class="btn btn-primary">Finalize Your Brief!</button>
     </form>
+  </div>
 
 
     <!-- Modal -->
@@ -165,15 +167,15 @@ Sign Up!
               <form class="change-brief">
 
                 <label for="exampleInputTitle">Title</label>
-                <input class="update form-control" type="text" name="brief[title]" placeholder="Title" required>
+                <input class="update form-control title-class" type="text" name="brief[title]" placeholder="Title" required>
 
 
                 <label for="exampleInputSubject">Subject</label>
-                <input class="update form-control" type="text" name="brief[subject]" placeholder="Subject" required>
+                <input class="update form-control subject-class" type="text" name="brief[subject]" placeholder="Subject" required>
 
 
                 <label for="exampleInputBody">Brief Text</label>
-                <textarea cols="30" rows="5" class="update form-control" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+                <textarea cols="30" rows="5" class="update form-control body-class" name="brief[body_text]" placeholder="Brief text here" required></textarea>
 
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -189,7 +191,7 @@ Sign Up!
     <div class="wrapper">
       <button type="button" class="btn btn-primary btn-lg briefs">See Briefs!</button>
 
-      <div id="content">
+      <div id="content" class="handlebars-show">
       </div>
 
     </div>
