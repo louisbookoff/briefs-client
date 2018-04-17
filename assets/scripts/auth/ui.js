@@ -42,14 +42,14 @@ const signInSuccess = function (data) {
   $('#pageone').toggleClass('hidden')
   $('.close').click()
   $('#InputEmail1').val('')
-  $('#InputPassword1').val('')
+  $('#InputPass1').val('')
   goTop()
 }
 const signInFailure = function () {
   $('#message').text('Error on sign in, try again!')
   $('#message').css('background-color', 'red')
   $('#InputEmail1').val('')
-  $('#InputPassword1').val('')
+  $('#InputPass1').val('')
   $('.close').click()
   // console.error(error)
   goTop()
@@ -58,8 +58,8 @@ const signInFailure = function () {
 const changePasswordSuccess = function () {
   $('#message').text('You have changed your password succesfully')
   $('#message').css('background-color', 'green')
-  $('#old-password').val('')
-  $('#new-password').val('')
+  $('#password-change-field').val('')
+  $('#password-confirm-change').val('')
   // console.log('change password successfully')
   goTop()
 }

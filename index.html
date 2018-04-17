@@ -14,17 +14,6 @@
 </head>
 
 <body>
-  <!-- Navigation Bar-->
-  <header id="topnav" class="defaultscroll fixed-top sticky nav">
-    <div class="container">
-      <!-- Logo container-->
-      <div class="logo row text-center">
-        <!-- image logo -->
-        <a href="https://imgur.com/nvcewEb"><img class="busie" alt="logo" src="https://i.imgur.com/nvcewEb.png" title="source: imgur.com" style="height: 100px" /></a>
-      </div>
-      <!-- End Logo container-->
-    </div>
-  </header>
   <!-- id created for my user action alerts -->
   <p id="message"></p>
 
@@ -33,98 +22,156 @@
     <h1 class="tagline">Create your internal library today, but remember "Keep it brief."</h1>
     <h4 class="taglinetwo"> If you haven't made an account, sign up! Otherwise, sign in to your portal below.</h4>
     <br>
-    <!--Sign Up Button -->
-    <div class="wrapper">
-      <button type="button" id="pageoneButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-up-modal">
-Sign Up!
-<!-- data target must be the same as id below -->
-</button>
-    </div>
 
-    <!-- Sign up Form Creation-->
-    <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button id="sign-up-button" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
-          </div>
-          <div class="modal-body">
-            <form class='signup-form'>
-              <div>
-                <label for="exampleInputEmail1">Email address</label>
-                <input name="credentials[email]" type="email" class="form-control" id="exampleInputEmail1" placeholder="Email" required>
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input name="credentials[password]" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-              </div>
-              <div class="form-group confirmation">
-                <label for="exampleInputPasswordConfirmation">Password Confirmation</label>
-                <input name="credentials[password_confirmation]" type="password" class="form-control" id="exampleInputPasswordConfirmation" placeholder="Password Confirmation" required>
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <br>
+<link href="http://cdn.phpoll.com/css/animate.css" rel="stylesheet">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    	<div class="container-fluid">
+			<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+				<a class="navbar-brand" href="">Briefs</a>
+			</div>
+			<div id="navbar" class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+                            <div class="col-lg-12">
+                                <div class="text-center"><h3><b>Register</b></h3></div>
+								<form id="ajax-register-form" method="post" role="form" autocomplete="off">
 
-    <!-- Button trigger modal SignIn -->
-    <div class="wrapper">
-      <button type="button" id="pageoneButton" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#sign-in-modal">
-        Sign In!
-        <!-- data target must be the same as id below -->
-      </button>
-    </div>
+									<div class="form-group">
+										<input type="email" name="credentials[email]" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+									</div>
+									<div class="form-group">
+										<input type="password" name="credentials[password]" id="password-conf" tabindex="2" class="form-control" placeholder="Password">
+									</div>
+									<div class="form-group">
+										<input type="password" name="credentials[password_confirmation]" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-xs-6 col-xs-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+											</div>
+										</div>
+									</div>
+                                    <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
+								</form>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                            <div class="col-lg-12">
+                                <div class="text-center"><h3><b>Log In</b></h3></div>
+                                <form id="ajax-login-form"  method="post" role="form" autocomplete="off">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="text" name="credentials[email" id="InputEmail1" tabindex="1" class="form-control" placeholder="Email" value="" autocomplete="off" required>
+                                    </div>
 
-    <!-- Modal sign-in -->
-    <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Sign In</h4>
-          </div>
-          <div class="modal-body">
-            <form class='signin-form'>
-              <div>
-                <label for="InputEmail">Email address</label>
-                <input name="credentials[email]" type="email" class="form-control" id="InputEmail1" placeholder="Email" autocomplete="email" required>
-              </div>
-              <div class="form-group">
-                <label for="InputPassword">Password</label>
-                <input name="credentials[password]" type="password" class="form-control" id="InputPassword1" placeholder="Password" required>
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" name="credentials[password]" id="InputPass1" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
+                                    </div>
 
-    <div class="offering">
-    </div>
-  </div>
+                                    <div class="form-group">
+                                        <div class="row">
+
+                                            <div class="col-xs-5 pull-right">
+                                                <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+			</div>
+		</div>
+	</nav>
+</div>
 
   <!-- Briefs Dashboard  -->
+
+
   <div id="dashboard" class="hidden">
+
+
+    <link href="http://cdn.phpoll.com/css/animate.css" rel="stylesheet">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        	<div class="container-fluid">
+    			<div class="navbar-header">
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    			<span class="sr-only">Toggle navigation</span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    			<span class="icon-bar"></span>
+    			</button>
+    				<a class="navbar-brand" href="">Briefs</a>
+    			</div>
+    			<div id="navbar" class="collapse navbar-collapse">
+    				<ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown">Change Password <span class="caret"></span></a>
+                            <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                                <div class="col-lg-12">
+                                    <div class="text-center"><h3><b>Change Password</b></h3></div>
+                                    <form id="ajax-change-password-form"  method="post" role="form" autocomplete="off">
+                                        <div class="form-group">
+                                            <label for="username">Old Password</label>
+                                            <input type="text" name="passwords[old]" id="password-change-field" tabindex="1" class="form-control" placeholder="password" value="" autocomplete="off" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="password">New Password</label>
+                                            <input type="password" name="passwords[new]" id="password-confirm-change" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="row">
+
+                                                <div class="col-xs-5 pull-right">
+                                                    <input type="submit" name="change-password-submit" id="change-password-submit" tabindex="4" class="form-control btn btn-success" value="Submit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+    			</div>
+    		</div>
+    	</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <h3>User Profile</h3>
-    <form id="change-password" class="border">
-      <div class="form-group">
-        <label for="exampleInputpickup1">Old Password</label>
-        <input class="form-control" type="password" name="passwords[old]" placeholder="Old Password" id="old-password" required>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputdropoff1">New Password</label>
-        <input class="form-control" type="password" name="passwords[new]" placeholder="New Password" id="new-password" required>
-      </div>
-      <div class="wrapper">
-        <button type="submit" class="btn btn-primary">Change Password</button>
-      </div>
-    </form>
     <br>
     <form id="sign-out" class="border">
       <fieldset>

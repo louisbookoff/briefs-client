@@ -86,9 +86,9 @@ const onDeleteBrief = function (event) {
 }
 
 const addHandlers = () => {
-  $('.signup-form').on('submit', onSignUp)
-  $('.signin-form').on('submit', onSignIn)
-  $('#change-password').on('submit', onChangePassword)
+  $('#ajax-register-form').on('submit', onSignUp)
+  $('#ajax-login-form').on('submit', onSignIn)
+  $('#ajax-change-password-form').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('#create-brief').on('submit', onCreateBriefs)
   $('.briefs').on('click', onGetBriefs)
