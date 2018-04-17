@@ -1,0 +1,40 @@
+
+<table style="width:100%" class="table content table-hover">
+  <thead class="thead-dark">
+    <th align="center"> Brief ID </th>
+    <th align="center"> Brief Title </th>
+    <th align="center"> Subject </th>
+    <th align="center"> Body Text </th>
+    <th align="center"> Created On </th>
+    <th align="center"> Updated On </th>
+
+
+    {{#each briefs as |brief|}}
+      <!-- {{> partial}} -->
+
+      <tr style="width:50%">
+  </thead>
+  <tbody>
+    <td> brief: {{brief.id}} </td>
+
+    <!-- <div> -->
+    <td> {{brief.title}} </td>
+    <td> {{brief.subject}} </td>
+    <td> {{brief.body_text}} </td>
+    <td> {{brief.created_at}} </td>
+    <td> {{brief.updated_at}} </td>
+
+    <!-- </div> -->
+
+    <td> <button data-id="{{brief.id}}" class="btn btn-default delete">Delete Brief</button> </td>
+    <td>
+      <!-- Button trigger modal -->
+<button data-id="{{brief.id}}" type="button" class="btn btn-primary new-button">
+Edit
+</button>
+      </td>
+      </tr>
+
+  </tbody>
+  {{/each}}
+</table>
