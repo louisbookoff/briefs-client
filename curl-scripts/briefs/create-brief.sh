@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/briefs" \
+curl "https://briefs-server.herokuapp.com/briefs" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \

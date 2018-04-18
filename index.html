@@ -24,81 +24,83 @@
     <br>
 
 
-<link href="http://cdn.phpoll.com/css/animate.css" rel="stylesheet">
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    	<div class="container-fluid">
-			<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+    <link href="http://cdn.phpoll.com/css/animate.css" rel="stylesheet">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			<span class="sr-only">Toggle navigation</span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
 			</button>
-				<a class="navbar-brand" href="">Briefs</a>
-			</div>
-			<div id="navbar" class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
-                            <div class="col-lg-12">
-                                <div class="text-center"><h3><b>Register</b></h3></div>
-								<form id="ajax-register-form" method="post" role="form" autocomplete="off">
+          <a class="navbar-brand" href="">Briefs</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Register <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+                <div class="col-lg-12">
+                  <div class="text-center">
+                    <h3><b>Register</b></h3></div>
+                  <form id="ajax-register-form" method="post" role="form" autocomplete="off">
 
-									<div class="form-group">
-										<input type="email" name="credentials[email]" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
-									</div>
-									<div class="form-group">
-										<input type="password" name="credentials[password]" id="password-conf" tabindex="2" class="form-control" placeholder="Password">
-									</div>
-									<div class="form-group">
-										<input type="password" name="credentials[password_confirmation]" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-									</div>
-									<div class="form-group">
-										<div class="row">
-											<div class="col-xs-6 col-xs-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
-											</div>
-										</div>
-									</div>
-                                    <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
-								</form>
-                            </div>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
-                        <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
-                            <div class="col-lg-12">
-                                <div class="text-center"><h3><b>Log In</b></h3></div>
-                                <form id="ajax-login-form"  method="post" role="form" autocomplete="off">
-                                    <div class="form-group">
-                                        <label for="email">Email</label>
-                                        <input type="text" name="credentials[email" id="InputEmail1" tabindex="1" class="form-control" placeholder="Email" value="" autocomplete="off" required>
-                                    </div>
+                    <div class="form-group">
+                      <input type="email" name="credentials[email]" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="credentials[password]" id="password-conf" tabindex="2" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="credentials[password_confirmation]" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6 col-xs-offset-3">
+                          <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+                        </div>
+                      </div>
+                    </div>
+                    <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
+                  </form>
+                </div>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                <div class="col-lg-12">
+                  <div class="text-center">
+                    <h3><b>Log In</b></h3></div>
+                  <form id="ajax-login-form" method="post" role="form" autocomplete="off">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" name="credentials[email" id="InputEmail1" tabindex="1" class="form-control" placeholder="Email" value="" autocomplete="off" required>
+                    </div>
 
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" name="credentials[password]" id="InputPass1" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
-                                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" name="credentials[password]" id="InputPass1" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
+                    </div>
 
-                                    <div class="form-group">
-                                        <div class="row">
+                    <div class="form-group">
+                      <div class="row">
 
-                                            <div class="col-xs-5 pull-right">
-                                                <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </ul>
-                    </li>
-                </ul>
-			</div>
-		</div>
-	</nav>
-</div>
+                        <div class="col-xs-5 pull-right">
+                          <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
 
   <!-- Briefs Dashboard  -->
 
@@ -108,59 +110,50 @@
 
     <link href="http://cdn.phpoll.com/css/animate.css" rel="stylesheet">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        	<div class="container-fluid">
-    			<div class="navbar-header">
-    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
     			<span class="sr-only">Toggle navigation</span>
     			<span class="icon-bar"></span>
     			<span class="icon-bar"></span>
     			<span class="icon-bar"></span>
     			</button>
-    				<a class="navbar-brand" href="">Briefs</a>
-    			</div>
-    			<div id="navbar" class="collapse navbar-collapse">
-    				<ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown">Change Password <span class="caret"></span></a>
-                            <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
-                                <div class="col-lg-12">
-                                    <div class="text-center"><h3><b>Change Password</b></h3></div>
-                                    <form id="ajax-change-password-form"  method="post" role="form" autocomplete="off">
-                                        <div class="form-group">
-                                            <label for="username">Old Password</label>
-                                            <input type="text" name="passwords[old]" id="password-change-field" tabindex="1" class="form-control" placeholder="password" value="" autocomplete="off" required>
-                                        </div>
+          <a class="navbar-brand" href="">Briefs</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Change Password <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                <div class="col-lg-12">
+                  <div class="text-center">
+                    <h3><b>Change Password</b></h3></div>
+                  <form id="ajax-change-password-form" method="post" role="form" autocomplete="off">
+                    <div class="form-group">
+                      <label for="username">Old Password</label>
+                      <input type="text" name="passwords[old]" id="password-change-field" tabindex="1" class="form-control" placeholder="password" value="" autocomplete="off" required>
+                    </div>
 
-                                        <div class="form-group">
-                                            <label for="password">New Password</label>
-                                            <input type="password" name="passwords[new]" id="password-confirm-change" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
-                                        </div>
+                    <div class="form-group">
+                      <label for="password">New Password</label>
+                      <input type="password" name="passwords[new]" id="password-confirm-change" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
+                    </div>
 
-                                        <div class="form-group">
-                                            <div class="row">
+                    <div class="form-group">
+                      <div class="row">
 
-                                                <div class="col-xs-5 pull-right">
-                                                    <input type="submit" name="change-password-submit" id="change-password-submit" tabindex="4" class="form-control btn btn-success" value="Submit">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </ul>
-                        </li>
-                    </ul>
-    			</div>
-    		</div>
-    	</nav>
-
-
-
-
-
-
-
-
-
+                        <div class="col-xs-5 pull-right">
+                          <input type="submit" name="change-password-submit" id="change-password-submit" tabindex="4" class="form-control btn btn-success" value="Submit">
+                        </div>
+                      </div>
+                  </form>
+                  </div>
+              </ul>
+            </li>
+          </ul>
+          </div>
+        </div>
+    </nav>
 
 
 
@@ -183,23 +176,23 @@
     </form>
 
     <div class="center-create-form">
-    <legend>Create a Brief</legend>
-    <form id="create-brief" class="create-form">
-      <div class="form-group">
-        <label for="exampleInputTitle">Title</label>
-        <input class="update form-control title" type="text" name="brief[title]" placeholder="Title"  size="15" required>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputSubject">Subject</label>
-        <input class="update form-control subject" type="text" name="brief[subject]" placeholder="Subject"  size="10" required>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputBody">Brief Text</label>
-        <textarea cols="30" rows="5" class="update form-control body-text" name="brief[body_text]" placeholder="Brief text here" required></textarea>
-      </div>
-      <button type="submit" class="btn btn-primary">Finalize Your Brief!</button>
-    </form>
-  </div>
+      <legend>Create a Brief</legend>
+      <form id="create-brief" class="create-form">
+        <div class="form-group">
+          <label for="exampleInputTitle">Title</label>
+          <input class="update form-control title" type="text" name="brief[title]" placeholder="Title" size="15" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputSubject">Subject</label>
+          <input class="update form-control subject" type="text" name="brief[subject]" placeholder="Subject" size="10" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputBody">Brief Text</label>
+          <textarea cols="30" rows="5" class="update form-control body-text" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Finalize Your Brief!</button>
+      </form>
+    </div>
 
 
     <!-- Modal -->
@@ -210,24 +203,24 @@
             <h5 class="modal-title" id="exampleModalLabel">Edit Brief</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           </div>
-            <div class="modal-body">
-              <form class="change-brief">
+          <div class="modal-body">
+            <form class="change-brief">
 
-                <label for="exampleInputTitle">Title</label>
-                <input class="update form-control title-class" type="text" name="brief[title]" placeholder="Title" required>
-
-
-                <label for="exampleInputSubject">Subject</label>
-                <input class="update form-control subject-class" type="text" name="brief[subject]" placeholder="Subject" required>
+              <label for="exampleInputTitle">Title</label>
+              <input class="update form-control title-class" type="text" name="brief[title]" placeholder="Title" required>
 
 
-                <label for="exampleInputBody">Brief Text</label>
-                <textarea cols="30" rows="5" class="update form-control body-class" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+              <label for="exampleInputSubject">Subject</label>
+              <input class="update form-control subject-class" type="text" name="brief[subject]" placeholder="Subject" required>
 
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-default save-brief">Save changes</button>
-                </div>
+
+              <label for="exampleInputBody">Brief Text</label>
+              <textarea cols="30" rows="5" class="update form-control body-class" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-default save-brief">Save changes</button>
+              </div>
             </form>
           </div>
         </div>
@@ -236,8 +229,9 @@
 
     <br>
     <div class="wrapper">
-      <button type="button" class="btn btn-primary btn-lg briefs">See Briefs!</button>
-
+      <div class="see-briefs-button">
+        <button type="button" class="btn btn-primary btn-lg briefs">See Briefs!</button>
+      </div>
       <div id="content" class="handlebars-show">
       </div>
 
@@ -250,7 +244,7 @@
 
 
     <!-- Dashboard closing div  -->
-  </div>
+    </div>
 </body>
 
 </html>
