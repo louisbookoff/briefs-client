@@ -19,8 +19,9 @@
 
   <div id="pageone">
     <!-- Tagline -->
-    <h1 class="tagline">Create your internal library today, but remember "Keep it brief."</h1>
-    <h4 class="taglinetwo"> If you haven't made an account, sign up! Otherwise, sign in to your portal below.</h4>
+    <h2 class="tagline">Create Briefs Today!</h2>
+    <h4 class="tagline"> If You Haven't Made An Account, Sign Up!</h4>
+    <h4 class="tagline"> Already A Member? Sign in!</h4>
     <br>
 
 
@@ -58,11 +59,11 @@
                     <div class="form-group">
                       <div class="row">
                         <div class="col-xs-6 col-xs-offset-3">
-                          <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-info" value="Register Now">
+                          <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn-info register-submit" value=" Register">
                         </div>
                       </div>
                     </div>
-                    <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
+
                   </form>
                 </div>
               </ul>
@@ -113,21 +114,21 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-    			<span class="sr-only">Toggle navigation</span>
-    			<span class="icon-bar"></span>
-    			<span class="icon-bar"></span>
-    			<span class="icon-bar"></span>
-    			</button>
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
           <a class="navbar-brand" href="">Briefs</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">Change Password <span class="caret"></span></a>
-              <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+              <a class="dropdown-toggle" data-toggle="dropdown">User Profile <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
                 <div class="col-lg-12">
                   <div class="text-center">
-                    <h3><b>Change Password</b></h3></div>
+                    <h5><b>Change Password or Sign Out</b></h5></div>
                   <form id="ajax-change-password-form" method="post" role="form" autocomplete="off">
                     <div class="form-group">
                       <label for="username">Old Password</label>
@@ -145,6 +146,12 @@
                         <div class="col-xs-5 pull-right">
                           <input type="submit" name="change-password-submit" id="change-password-submit" tabindex="4" class="form-control btn btn-success" value="Submit">
                         </div>
+
+                        <div class="wrapper col-xs-5 pull-left">
+                          <!-- <legend>Sign out!</legend> -->
+                          <button type="button" class="btn btn-primary sign-out">Sign Out!</button>
+                        </div>
+                        </div>
                       </div>
                   </form>
                   </div>
@@ -158,25 +165,46 @@
 
 
 
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Categories Coming Soon
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li class="disabled"><a href="#" class="disabled">Product</a></li>
+        <li class="disabled"><a href="#">Marketing</a></li>
+        <li class="disabled"><a href="#">Dev</a></li>
+        <li class="disabled"><a href="#">Growth</a></li>
+        <li class="disabled"><a href="#">People</a></li>
+      </ul>
+    </div>
+
+
+
+
+<!-- Side-nav -->
+<!-- <div class="side-nav col-md-6 col-xs-12">
+<ul class="list-group">
+  <h4 class="border-text"> Categories</h4>
+  <h6 class="border-text"> Coming Soon! </h6>
+  <li class="list-group-item disabled">Product</li>
+  <li class="list-group-item disabled">Marketing</li>
+  <li class="list-group-item disabled">Dev</li>
+  <li class="list-group-item disabled">Growth</li>
+  <li class="list-group-item disabled">People</li>
+  <li class="list-group-item disabled">Operations</li>
+  <li class="list-group-item disabled">Culture</li>
+  <li class="list-group-item disabled">User Feedback</li>
+</ul>
+</div> -->
 
 
 
 
 
-
-    <h3>User Profile</h3>
-    <br>
-    <form id="sign-out" class="border">
-      <fieldset>
-        <div class="wrapper">
-          <!-- <legend>Sign out!</legend> -->
-          <button type="submit" class="btn btn-primary sign-out">Sign Out!</button>
-        </div>
-      </fieldset>
-    </form>
-
+<!-- Create Brief form -->
     <div class="center-create-form">
-      <legend>Create a Brief</legend>
+      <h3>Create a Brief</h3>
       <form id="create-brief" class="create-form">
         <div class="form-group">
           <label for="exampleInputTitle">Title</label>
@@ -191,6 +219,7 @@
           <textarea cols="30" rows="5" class="update form-control body-text" name="brief[body_text]" placeholder="Brief text here" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Finalize Your Brief!</button>
+        <button type="button" class="btn btn-primary briefs">See Briefs!</button>
       </form>
     </div>
 
@@ -229,9 +258,6 @@
 
     <br>
     <div class="wrapper">
-      <div class="see-briefs-button">
-        <button type="button" class="btn btn-primary btn-lg briefs">See Briefs!</button>
-      </div>
       <div id="content" class="handlebars-show">
       </div>
 

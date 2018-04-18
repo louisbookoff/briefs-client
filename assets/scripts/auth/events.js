@@ -3,7 +3,6 @@
 const api = require('./api')
 const getFormFields = require('.../../../lib/get-form-fields')
 const ui = require('./ui')
-const showHandlebars = require('../templates/partial.hbs')
 const store = require('../store')
 
 const onSignUp = function (event) {
@@ -89,7 +88,7 @@ const addHandlers = () => {
   $('#ajax-register-form').on('submit', onSignUp)
   $('#ajax-login-form').on('submit', onSignIn)
   $('#ajax-change-password-form').on('submit', onChangePassword)
-  $('#sign-out').on('submit', onSignOut)
+  $('.sign-out').on('click', onSignOut)
   $('#create-brief').on('submit', onCreateBriefs)
   $('.briefs').on('click', onGetBriefs)
   $('.change-brief').on('submit', onUpdateBrief)

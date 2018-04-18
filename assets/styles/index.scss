@@ -1,16 +1,29 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'colors';
 
+.tagline {
+  text-align: center;
+}
+
+.btn-info {
+  text-align: center;
+}
 
 .see-briefs-button {
   margin: auto;
   text-align: center;
 }
 
+.dropdown-menu {
+  color: $alizarincrimson;
+}
+
 .center-create-form {
-  border: 3px solid black;
+  border: 3px solid $darkgrey;
   margin: auto;
   padding: 10px;
+  position: relative;
   width: 50%;
 }
 
