@@ -96,6 +96,9 @@ const addHandlers = () => {
   $('#content').on('click', '.new-button', function (event) {
     console.log('we working')
     $('#testing-this-modal').modal('toggle')
+    $('.title-class').val('')
+    $('.subject-class').val('')
+    $('.body-class').val('')
     store.brief = event.target.dataset.id
     // const showBriefsHtml = showHandlebars({ briefs: null })
     // $('#handlebars').html(showBriefsHtml)
