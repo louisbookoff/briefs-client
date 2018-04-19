@@ -148,6 +148,8 @@ const changePasswordFailure = function () {
 const signOutSuccess = function () {
   $('#dashboard').toggleClass('hidden')
   $('#pageone').removeClass('hidden')
+  $('#password-change-field').val('')
+  $('#password-confirm-change').val('')
   $('.content').empty()
 
   $.toast({
@@ -168,6 +170,8 @@ const signOutSuccess = function () {
 }
 
 const signOutFailure = function () {
+  $('#password-change-field').val('')
+  $('#password-confirm-change').val('')
   $.toast({
     text: 'Check your connection',
     heading: 'Sign Out Failure',
@@ -315,6 +319,8 @@ const updateBriefFailure = function () {
   $('.title-class').val('')
   $('.subject-class').val('')
   $('.body-class').val('')
+  $('#password-change-field').val('')
+  $('#password-confirm-change').val('')
 
   $.toast({
     text: 'Check your connection and make sure the correct info has been entered',
@@ -335,6 +341,8 @@ const updateBriefFailure = function () {
 
 const deleteBriefSuccess = function () {
   $('.content').empty()
+  $('#password-change-field').val('')
+  $('#password-confirm-change').val('')
 
   $.toast({
     text: 'You Have Succesfully Deleted Your Brief! Click Get Briefs To See Updated List',
