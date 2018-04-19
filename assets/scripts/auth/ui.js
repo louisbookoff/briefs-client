@@ -22,7 +22,7 @@ const signUpSuccess = function (data) {
     allowToastClose: true,
     hideAfter: 3000,
     stack: 5,
-    position: 'bottom-left',
+    position: 'top-left',
     textAlign: 'left',
     loader: true,
     loaderBg: '#fed',
