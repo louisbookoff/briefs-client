@@ -6,6 +6,9 @@ const events = require('./events')
 require('./../../../node_modules/jquery-toast-plugin/src/jquery.toast.js')
 require('./../../../node_modules/jquery-toast-plugin/src/jquery.toast.css')
 
+
+
+
 const signUpSuccess = function (data) {
   // if ($(.form-group).val() === $(.confirmation).val())
   $('.close').click()
@@ -31,6 +34,9 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function () {
+  $('#email').val('')
+  $('#password-conf').val('')
+  $('#confirm-password').val('')
   $('#email').val('')
   $('#password-conf').val('')
   $('#confirm-password').val('')
@@ -62,6 +68,9 @@ const signInSuccess = function (data) {
   $('.close').click()
   $('#InputEmail1').val('')
   $('#InputPass1').val('')
+  $('#email').val('')
+  $('#password-conf').val('')
+  $('#confirm-password').val('')
 
   $.toast({
     text: 'You have signed in!',
@@ -82,6 +91,9 @@ const signInSuccess = function (data) {
 const signInFailure = function () {
   $('#InputEmail1').val('')
   $('#InputPass1').val('')
+  $('#email').val('')
+  $('#password-conf').val('')
+  $('#confirm-password').val('')
   $('.close').click()
 
   $.toast({
@@ -104,6 +116,11 @@ const signInFailure = function () {
 const changePasswordSuccess = function () {
   $('#password-change-field').val('')
   $('#password-confirm-change').val('')
+  $('#email').val('')
+  $('#password-conf').val('')
+  $('#confirm-password').val('')
+  $('#InputEmail1').val('')
+  $('#InputPass1').val('')
 
   $.toast({
     text: 'You have succesfully change your password!',
@@ -125,6 +142,11 @@ const changePasswordSuccess = function () {
 const changePasswordFailure = function () {
   $('#password-change-field').val('')
   $('#password-confirm-change').val('')
+  $('#email').val('')
+  $('#password-conf').val('')
+  $('#confirm-password').val('')
+  $('#InputEmail1').val('')
+  $('#InputPass1').val('')
 
   $.toast({
     text: 'Make sure you entered in the correct information!',
@@ -148,6 +170,11 @@ const signOutSuccess = function () {
   $('#pageone').removeClass('hidden')
   $('#password-change-field').val('')
   $('#password-confirm-change').val('')
+  $('#InputEmail1').val('')
+  $('#InputPass1').val('')
+  $('#email').val('')
+  $('#password-conf').val('')
+  $('#confirm-password').val('')
   $('.content').empty()
 
   $.toast({
@@ -170,6 +197,13 @@ const signOutSuccess = function () {
 const signOutFailure = function () {
   $('#password-change-field').val('')
   $('#password-confirm-change').val('')
+  // sign up clear form
+  $('#email').val('')
+  $('#password-conf').val('')
+  $('#confirm-password').val('')
+  // sign in clear form
+  $('#InputEmail1').val('')
+  $('#InputPass1').val('')
   $.toast({
     text: 'Check your connection',
     heading: 'Sign Out Failure',

@@ -5,6 +5,16 @@ const getFormFields = require('.../../../lib/get-form-fields')
 const ui = require('./ui')
 const store = require('../store')
 
+const dropDown = function () {
+  $('#password-change-field').val('')
+  $('#password-confirm-change').val('')
+  $('#email').val('')
+  $('#password-conf').val('')
+  $('#confirm-password').val('')
+  $('#InputEmail1').val('')
+  $('#InputPass1').val('')
+}
+
 const onSignUp = function (event) {
   event.preventDefault()
 
@@ -98,6 +108,7 @@ const addHandlers = () => {
     // const showBriefsHtml = showHandlebars({ briefs: null })
     // $('#handlebars').html(showBriefsHtml)
   })
+  $('.dropdown-toggle').on('click', dropDown)
 }
 
 module.exports = {
