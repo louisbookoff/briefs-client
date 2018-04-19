@@ -15,7 +15,7 @@ const signUpSuccess = function (data) {
   // console.log(data)
 
   $.toast({
-    text: 'You have signed up for briefs',
+    text: 'You have signed up for briefs. Please log in to get started.',
     heading: 'Sign up success!',
     icon: 'success',
     showHideTransition: 'slide',
