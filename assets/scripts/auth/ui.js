@@ -12,7 +12,6 @@ const signUpSuccess = function (data) {
   $('#email').val('')
   $('#password-conf').val('')
   $('#confirm-password').val('')
-  // console.log(data)
 
   $.toast({
     text: 'You have signed up for briefs. Please log in to get started.',
@@ -57,7 +56,6 @@ const signUpFailure = function () {
 const signInSuccess = function (data) {
   // keep but change id for this and temporarily commenting out below
   $('#dashboard').removeClass('hidden')
-  // console.log(data)
   store.user = data.user
   // Keep but temporarilly comment out to test
   $('#pageone').toggleClass('hidden')
@@ -231,7 +229,6 @@ const createBriefFailure = function () {
 }
 
 const getBriefsSuccess = function (data) {
-  // console.log(data)
   const showBriefsHtml = showHandlebars({ briefs: data.briefs })
   $('#content').html(showBriefsHtml)
   const elements = data.briefs

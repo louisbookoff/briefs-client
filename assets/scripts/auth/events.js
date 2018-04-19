@@ -63,10 +63,7 @@ const onGetBriefs = function (event) {
 const onUpdateBrief = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log('data is ', data)
-  console.log('children are', event.target.elements)
 
-  console.log('event.target is', event.target)
   const updateId = event.target.dataset.id
   // send data to api method
   api.updateBrief(updateId, data)
@@ -81,7 +78,6 @@ const onDeleteBrief = function (event) {
   api.deleteBrief(id)
     .then(ui.deleteBriefSuccess)
     .catch(ui.deleteBriefFailure)
-  // console.log('data is ', data)
 }
 
 const addHandlers = () => {
@@ -94,7 +90,6 @@ const addHandlers = () => {
   $('.change-brief').on('submit', onUpdateBrief)
   $('#content').on('click', '.delete', onDeleteBrief)
   $('#content').on('click', '.new-button', function (event) {
-    console.log('we working')
     $('#testing-this-modal').modal('toggle')
     $('.title-class').val('')
     $('.subject-class').val('')

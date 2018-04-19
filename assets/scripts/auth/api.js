@@ -71,8 +71,6 @@ const getBriefs = function () {
 }
 
 const updateBrief = function (updateId, data) {
-  console.log('data is ', data)
-  console.log('store.brief is ', store.brief)
   return $.ajax({
     url: config.apiUrl + '/briefs/' + store.brief,
     method: 'PATCH',
