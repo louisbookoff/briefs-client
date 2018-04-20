@@ -10,6 +10,8 @@ To get started with the client please for and clone this repo. From there you ca
 
 * [Wireframes and User Stories](https://imgur.com/a/vXPbK)
 * Above contains early iteration of ERD
+* [App Screenshot] (https://imgur.com/tleGFxt)
+
 
 ### Development Process
 The development process went smoothly, spending Day 1 of the project sprint planning out the application.  From there I uploaded all of my user stories to Trello and leveraged that as my Roadmap for the dev process. The application differs from the initial design and goal of I what I plan for it to be due to project scope, I was still able to build the base of the internal tool to be leveraged within my company.  I utilized my initial sketches/wireframes to determine layout, varying slightly from those designs to insure the project scope requirements were met. Big thing with the design was simplicity, which I believe I kept throughout the application. One area that monopolized a significant amount of time was incorporating the edit button handlebars into the application.  Seeing my development from the first application I built to this one is incredible and I feel extremely comfortable developing in Rails.  I wanted to use Ember for this however, I decided against it as my general notion of front-end frameworks is that they should speed up development and I did not believe that would be the case for this project. There were times throughout that I got side-tracked on some css and making sure everything aligned, as well as getting my auth forms to clear since they weren't standard bootstrap forms. This is an application that I will use as foundation for future iterations and hope to use it internally for my company
