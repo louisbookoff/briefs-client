@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Briefs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <!-- id created for my user action alerts -->
+  <p id="message"></p>
+
+  <div id="pageone">
+    <!-- Tagline -->
+    <h2 class="tagline">Create Briefs Today!</h2>
+    <h4 class="tagline"> If You Haven't Made An Account, Sign Up!</h4>
+    <h4 class="tagline"> Already A Member? Sign in!</h4>
+    <br>
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" rel="stylesheet">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+          <a class="navbar-brand">Briefs</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="clear-dropdown dropdown">
+              <a class="dropdown-toggle clearing-form" data-toggle="dropdown">Register <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+                <div class="col-lg-12">
+                  <div class="text-center">
+                    <h3><b>Register</b></h3></div>
+                  <form id="ajax-register-form" method="post" role="form" autocomplete="off">
+
+                    <div class="form-group">
+                      <input type="email" name="credentials[email]" id="email" tabindex="1" class="form-control exampleInputEmail1 " placeholder="Email Address" value="" required>
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="credentials[password]" id="password-conf" tabindex="2" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="credentials[password_confirmation]" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-xs-6 col-xs-offset-3">
+                          <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn-info register-submit" value=" Register" required>
+                        </div>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">Log In <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-lr animated slideInRight" role="menu">
+                <div class="col-lg-12">
+                  <div class="text-center">
+                    <h3><b>Log In</b></h3></div>
+                  <form id="ajax-login-form" method="post" role="form" autocomplete="off">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" name="credentials[email]" id="InputEmail1" tabindex="1" class="form-control" placeholder="Email" value="" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" name="credentials[password]" id="InputPass1" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+
+                        <div class="col-xs-5 pull-right">
+                          <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-success" value="Log In">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Briefs Dashboard  -->
+
+
+  <div id="dashboard" class="hidden">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" rel="stylesheet">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+          <a class="navbar-brand" href="">Briefs</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">User Profile <span class="caret"></span></a>
+              <ul class="dropdown-menu dropdown-lr animated flipInX" role="menu">
+                <div class="col-lg-12">
+                  <div class="text-center">
+                    <h5><b>Change Password or Sign Out</b></h5></div>
+                  <form id="ajax-change-password-form" method="post" role="form" autocomplete="off">
+                    <div class="form-group">
+                      <label for="username">Old Password</label>
+                      <input type="password" name="passwords[old]" id="password-change-field" tabindex="1" class="form-control" placeholder="password" value="" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="password">New Password</label>
+                      <input type="password" name="passwords[new]" id="password-confirm-change" tabindex="2" class="form-control" placeholder="Password" autocomplete="off" required>
+                    </div>
+
+                    <div class="form-group">
+                      <div class="row">
+
+                        <div class="col-xs-5 pull-right">
+                          <input type="submit" name="change-password-submit" id="change-password-submit" tabindex="4" class="form-control btn btn-success" value="Submit">
+                        </div>
+
+                        <div class="wrapper col-xs-5 pull-left">
+                          <!-- <legend>Sign out!</legend> -->
+                          <button type="button" class="btn btn-primary sign-out">Sign Out!</button>
+                        </div>
+                        </div>
+                      </div>
+                  </form>
+                  </div>
+              </ul>
+            </li>
+          </ul>
+          </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="dropdown">
+      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        Categories Coming Soon
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+        <li class="disabled"><a href="#" class="disabled">Product</a></li>
+        <li class="disabled"><a href="#">Marketing</a></li>
+        <li class="disabled"><a href="#">Dev</a></li>
+        <li class="disabled"><a href="#">Growth</a></li>
+        <li class="disabled"><a href="#">People</a></li>
+      </ul>
+    </div>
+
+
+
+
+<!-- Side-nav -->
+<!-- <div class="side-nav col-md-6 col-xs-12">
+<ul class="list-group">
+  <h4 class="border-text"> Categories</h4>
+  <h6 class="border-text"> Coming Soon! </h6>
+  <li class="list-group-item disabled">Product</li>
+  <li class="list-group-item disabled">Marketing</li>
+  <li class="list-group-item disabled">Dev</li>
+  <li class="list-group-item disabled">Growth</li>
+  <li class="list-group-item disabled">People</li>
+  <li class="list-group-item disabled">Operations</li>
+  <li class="list-group-item disabled">Culture</li>
+  <li class="list-group-item disabled">User Feedback</li>
+</ul>
+</div> -->
+
+
+
+
+
+<!-- Create Brief form -->
+    <div class="center-create-form">
+      <h3>Create a Brief</h3>
+      <form id="create-brief" class="create-form">
+        <div class="form-group">
+          <label for="exampleInputTitle">Title</label>
+          <input class="update form-control title" type="text" name="brief[title]" placeholder="Title" size="15" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputSubject">Subject</label>
+          <input class="update form-control subject" type="text" name="brief[subject]" placeholder="Subject" size="10" required>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputBody">Brief Text</label>
+          <textarea cols="30" rows="5" class="update form-control body-text" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Finalize Your Brief!</button>
+        <button type="button" class="btn btn-primary briefs">See Briefs!</button>
+      </form>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="testing-this-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Edit Brief</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <form class="change-brief">
+
+              <label for="exampleInputTitle">Title</label>
+              <input class="update form-control title-class" type="text" name="brief[title]" placeholder="Title" required>
+
+
+              <label for="exampleInputSubject">Subject</label>
+              <input class="update form-control subject-class" type="text" name="brief[subject]" placeholder="Subject" required>
+
+
+              <label for="exampleInputBody">Brief Text</label>
+              <textarea cols="30" rows="5" class="update form-control body-class" name="brief[body_text]" placeholder="Brief text here" required></textarea>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-default save-brief">Save changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <div class="wrapper">
+      <div id="content" class="handlebars-show">
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <!-- Dashboard closing div  -->
+    </div>
+</body>
+
+</html>
